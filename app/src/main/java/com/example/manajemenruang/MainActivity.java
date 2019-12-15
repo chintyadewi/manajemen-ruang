@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         loadFragment(new RuangFragment());
         BottomNavigationView bottomNavigationView=findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        bottomNavigationView.setSelectedItemId(R.id.action_ruang);
     }
 
     private boolean loadFragment(Fragment fragment){
@@ -33,10 +34,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Fragment fragment=null;
         switch (menuItem.getItemId()){
-            case R.id.action_ruang:
-                fragment=new RuangFragment();
-                break;
             case R.id.action_peminjam:
+                fragment=new PeminjamFragment();
+                break;
+            case R.id.action_ruang:
                 fragment=new RuangFragment();
                 break;
             case R.id.action_setting:

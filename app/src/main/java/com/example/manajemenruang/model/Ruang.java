@@ -6,11 +6,11 @@ import java.io.Serializable;
 
 @IgnoreExtraProperties
 public class Ruang implements Serializable {
-    public String id;
-    public String nama;
-    public int lantai;
-    public String deskripsi;
-    public boolean dipinjam;
+    private String id;
+    private String nama;
+    private int lantai;
+    private String deskripsi;
+    private boolean dipinjam;
 
     public Ruang(){};
 

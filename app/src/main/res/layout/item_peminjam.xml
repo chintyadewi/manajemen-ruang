@@ -6,7 +6,7 @@
     android:layout_margin="5dp"
     android:elevation="10dp"
     app:cardCornerRadius="5dp"
-    android:id="@+id/cv_ruang">
+    android:id="@+id/cv_peminjam">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,6 +15,15 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/tv_ruang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Ruang"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginRight="15dp"/>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,31 +31,31 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_nim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1741720000" />
+
+            <TextView
                 android:id="@+id/tv_nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama Ruang" />
+                android:text="Chintya" />
 
             <TextView
-                android:id="@+id/tv_lantai"
+                android:id="@+id/tv_kelas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7" />
-
-            <TextView
-                android:id="@+id/tv_deskripsi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ruang Teori" />
+                android:text="TI-3F" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_pinjam"
+            android:id="@+id/btn_selesai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.2"
             android:backgroundTint="@color/colorAccent"
-            android:text="Pinjam" />
+            android:text="Selesai" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

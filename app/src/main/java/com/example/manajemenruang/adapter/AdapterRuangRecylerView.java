@@ -2,6 +2,7 @@ package com.example.manajemenruang.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,14 +69,14 @@ public class AdapterRuangRecylerView extends RecyclerView.Adapter<AdapterRuangRe
         String deskripsi=daftarRuang.get(position).getDeskripsi();
         Boolean dipinjam=daftarRuang.get(position).getDipinjam();
 
-        holder.cvKelas.setOnClickListener(new View.OnClickListener() {
+        holder.cvRuang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), "On Click", Toast.LENGTH_SHORT).show();
             }
         });
 
-        holder.cvKelas.setOnLongClickListener(new View.OnLongClickListener() {
+        holder.cvRuang.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 Toast.makeText(view.getContext(), "On Long Click", Toast.LENGTH_SHORT).show();
@@ -86,7 +87,9 @@ public class AdapterRuangRecylerView extends RecyclerView.Adapter<AdapterRuangRe
         holder.btnPinjam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(PeminjamanActivity.getActIntent((Activity) context).putExtra("data", daftarRuang.get(position)));
+                Intent i=new Intent(context.getApplicationContext(), PeminjamanActivity.class);
+                i.putExtra("data", daftarRuang.get(position));
+                context.startActivity(i);
             }
         });
 
@@ -115,13 +118,13 @@ public class AdapterRuangRecylerView extends RecyclerView.Adapter<AdapterRuangRe
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        CardView cvKelas;
+        CardView cvRuang;
         TextView tvNama, tvLantai, tvDeskripsi;
         Button btnPinjam;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            cvKelas=itemView.findViewById(R.id.cv_kelas);
+            cvRuang=itemView.findViewById(R.id.cv_ruang);
             tvNama=itemView.findViewById(R.id.tv_nama);
             tvLantai=itemView.findViewById(R.id.tv_lantai);
             tvDeskripsi=itemView.findViewById(R.id.tv_deskripsi);

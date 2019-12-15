@@ -1,5 +1,7 @@
 package com.example.manajemenruang;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -46,6 +48,14 @@ public class RuangFragment extends Fragment {
         rvRuang =view.findViewById(R.id.rv_ruang);
         btnTambah=view.findViewById(R.id.btn_tambah);
 
+        btnTambah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getActivity().getApplicationContext(), TambahRuangActivity.class);
+                startActivity(i);
+            }
+        });
+
         rvRuang.setHasFixedSize(true);
         layoutManager=new LinearLayoutManager(getActivity().getApplicationContext());
         rvRuang.setLayoutManager(layoutManager);
@@ -76,9 +86,4 @@ public class RuangFragment extends Fragment {
         });
         return view;
     }
-
-    public void OnClickTambah(View view){
-        Intent i=new Intent(getActivity().getApplicationContext(), TambahRuangActivity.class);
-        startActivity(i);
-    };
 }

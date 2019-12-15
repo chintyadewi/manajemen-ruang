@@ -16,6 +16,7 @@ import com.android.volley.AuthFailureError;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.manajemenruang.model.Peminjam;
 import com.example.manajemenruang.model.Ruang;
 import com.example.manajemenruang.service.MySingleton;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -65,17 +66,21 @@ public class PeminjamanActivity extends AppCompatActivity {
         tvDeskripsi=findViewById(R.id.tv_deskripsi);
 
         final Ruang ruang = (Ruang) getIntent().getSerializableExtra("data");
-        if(ruang!=null){
+        ruang.setDipinjam(true);
+        if(ruang!=null) {
             tvNama.setText(ruang.getNama());
             tvLantai.setText(String.valueOf(ruang.getLantai()));
-            tvDeskripsi.setText(String.valueOf(ruang.getDeskripsi()));
+            tvDeskripsi.setText(ruang.getDeskripsi());
         }
 
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ruang.setDipinjam(true);
-                updateRuang(ruang);
+                Peminjam peminjam=new Peminjam(edtNim.getText().toString(), edtNama.getText().toString(), edtKelas.getText().toString(), ruang.getId());
+                database.child("peminjam").push().setValue(peminjam);
+
+                Ruang r=new Ruang(ruang.getNama(), ruang.getLantai(), ruang.getDeskripsi(), true);
+                updateRuang(r, ruang.getId());
 
                 TOPIC = "/topics/peminjam";
                 NOTIFICATION_TITLE = "Peminjaman Ruang";
@@ -129,10 +134,10 @@ public class PeminjamanActivity extends AppCompatActivity {
         MySingleton.getInstance(getApplicationContext()).addToRequestQueue(jsonObjectRequest);
     }
 
-    private void updateRuang(Ruang ruang) {
-        database.child("ruang") //akses parent index, ibaratnya seperti nama tabel
-                .child(ruang.getId()) //select barang berdasarkan key
-                .setValue(ruang) //set value barang yang baru
+    private void updateRuang(Ruang r, String id) {
+        database.child("ruang")
+                .child(id)
+                .setValue(r)
                 .addOnSuccessListener(this, new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
