@@ -9,4 +9,12 @@
 <!--    f5b85f tembok-->
 <!--    c17200 lingkaran-->
 
+    <color name="primary">#0B94D9</color>
+    <color name="primaryLogo">#0A7BB4</color>
+    <color name="primaryInfo">#034367</color>
+    <color name="primaryDark">#141d26</color>
+    <color name="black">#000000</color>
+    <color name="white">#F4F4F6</color>
+    <color name="red">#D32F2F</color>
+
 </resources>
