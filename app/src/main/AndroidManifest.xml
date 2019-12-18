@@ -12,20 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/ActivityThemeLight">
-        <activity android:name=".SettingActivity"></activity>
         <activity android:name=".TambahRuangActivity" />
         <activity android:name=".PeminjamanActivity" />
         <activity android:name=".MainActivity">
-        <activity
-            android:name=".SettingActivity"
-            android:label="@string/title_activity_settings" />
-            <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/title_setting" />
+<!--        <activity android:name=".SplashActivity">-->
+<!--        </activity>-->
 
         <service
             android:name=".service.MyFirebaseMessagingService"

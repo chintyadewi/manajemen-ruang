@@ -11,19 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/btnSttng"
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_height="200dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10dp"
-        android:src=""
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:background="@null"/>
+        <ImageButton
+            android:id="@+id/btnSttng"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/common_google_signin_btn_icon_dark"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:background="@null"/>
 
         <ImageButton
             android:id="@+id/btnInfo"
@@ -34,7 +34,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btnSttng"
             android:layout_marginTop="10dp"
-            android:src=""
+            android:src="@drawable/ic_launcher_foreground"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
             android:background="@null"/>
