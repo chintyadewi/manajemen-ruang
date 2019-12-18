@@ -83,7 +83,7 @@ public class AdapterRuangRecylerView extends RecyclerView.Adapter<AdapterRuangRe
         holder.cvRuang.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                final Dialog dialog = new Dialog(context);
+                final Dialog dialog = new Dialog(view.getContext());
                 dialog.setContentView(R.layout.dialog_view);
                 dialog.setTitle("Hapus Ruang");
                 dialog.show();
