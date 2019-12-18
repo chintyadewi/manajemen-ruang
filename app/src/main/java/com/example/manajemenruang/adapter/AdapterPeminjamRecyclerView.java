@@ -1,5 +1,6 @@
 package com.example.manajemenruang.adapter;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -14,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.manajemenruang.EditPeminjamActivity;
 import com.example.manajemenruang.MainActivity;
 import com.example.manajemenruang.R;
 import com.example.manajemenruang.model.Peminjam;
@@ -81,15 +83,9 @@ public class AdapterPeminjamRecyclerView extends RecyclerView.Adapter<AdapterPem
         holder.cvPeminjam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "On Click", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        holder.cvPeminjam.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                Toast.makeText(view.getContext(), "On Long Click", Toast.LENGTH_SHORT).show();
-                return true;
+                Intent i=new Intent(context.getApplicationContext(), EditPeminjamActivity.class);
+                i.putExtra("data", daftarPeminjam.get(position));
+                context.startActivity(i);
             }
         });
 

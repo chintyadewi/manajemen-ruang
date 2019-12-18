@@ -112,15 +112,6 @@ public class AdapterRuangRecylerView extends RecyclerView.Adapter<AdapterRuangRe
             }
         });
 
-//        holder.btnSelesai.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Ruang ruang=daftarRuang.get(position);
-//                ruang.setDipinjam(false);
-//                updateRuang(ruang, holder,(Activity) context);
-//            }
-//        });
-
         holder.tvNama.setText(nama);
         holder.tvLantai.setText("Lantai "+lantai);
         holder.tvDeskripsi.setText(deskripsi);
