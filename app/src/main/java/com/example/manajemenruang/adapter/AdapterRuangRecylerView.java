@@ -1,6 +1,7 @@
 package com.example.manajemenruang.adapter;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -21,6 +22,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.manajemenruang.PeminjamanActivity;
 import com.example.manajemenruang.R;
+import com.example.manajemenruang.TambahRuangActivity;
 import com.example.manajemenruang.model.Ruang;
 import com.example.manajemenruang.service.MySingleton;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -72,14 +74,31 @@ public class AdapterRuangRecylerView extends RecyclerView.Adapter<AdapterRuangRe
         holder.cvRuang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "On Click", Toast.LENGTH_SHORT).show();
+                Intent i=new Intent(context.getApplicationContext(), TambahRuangActivity.class);
+                i.putExtra("data", daftarRuang.get(position));
+                context.startActivity(i);
             }
         });
 
         holder.cvRuang.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                Toast.makeText(view.getContext(), "On Long Click", Toast.LENGTH_SHORT).show();
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.dialog_view);
+                dialog.setTitle("Hapus Ruang");
+                dialog.show();
+
+                Button delButton = (Button) dialog.findViewById(R.id.btn_delete);
+
+                delButton.setOnClickListener(
+                        new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                dialog.dismiss();
+                                deleteRuang(daftarRuang.get(position));
+                            }
+                        }
+                );
                 return true;
             }
         });
@@ -185,5 +204,16 @@ public class AdapterRuangRecylerView extends RecyclerView.Adapter<AdapterRuangRe
             }
         };
         MySingleton.getInstance(context.getApplicationContext()).addToRequestQueue(jsonObjectRequest);
+    }
+
+    public void deleteRuang(Ruang ruang) {
+        if (database != null) {
+            database.child("ruang").child(ruang.getId()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    Toast.makeText(context.getApplicationContext(), "Ruang berhasil dihapus", Toast.LENGTH_LONG).show();
+                }
+            });
+        }
     }
 }

@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tambah Ruang"
+        android:text="Ruang"
         android:id="@+id/tv_judul"
         android:layout_marginTop="10dp"
         android:textStyle="bold"

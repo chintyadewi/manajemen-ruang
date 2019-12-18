@@ -57,18 +57,35 @@ public class TambahRuangActivity extends AppCompatActivity {
 
         database= FirebaseDatabase.getInstance().getReference();
 
-        btnSimpan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!TextUtils.isEmpty(edtNama.getText().toString()) && !TextUtils.isEmpty(edtLantai.getText().toString()) && !TextUtils.isEmpty(edtDeskripsi.getText().toString()))
-                    tambahRuang(new Ruang(edtNama.getText().toString(), Integer.parseInt(edtLantai.getText().toString()), edtDeskripsi.getText().toString(), false));
-                else
-                    Toast.makeText(TambahRuangActivity.this,"Data ruang tidak boleh kosong", Toast.LENGTH_SHORT).show();
+        final Ruang ruang = (Ruang) getIntent().getSerializableExtra("data");
+        if (ruang!=null){
+            edtNama.setText(ruang.getNama());
+            edtLantai.setText(ruang.getLantai());
+            edtDeskripsi.setText(ruang.getDeskripsi());
+            btnSimpan.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ruang.setNama(edtNama.getText().toString());
+                    ruang.setLantai(Integer.parseInt(edtLantai.getText().toString()));
+                    ruang.setDeskripsi(edtDeskripsi.getText().toString());
 
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(edtNama.getWindowToken(), 0);
-            }
-        });
+                    updateRuang(ruang);
+                }
+            });
+        }else{
+            btnSimpan.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(!TextUtils.isEmpty(edtNama.getText().toString()) && !TextUtils.isEmpty(edtLantai.getText().toString()) && !TextUtils.isEmpty(edtDeskripsi.getText().toString()))
+                        tambahRuang(new Ruang(edtNama.getText().toString(), Integer.parseInt(edtLantai.getText().toString()), edtDeskripsi.getText().toString(), false));
+                    else
+                        Toast.makeText(TambahRuangActivity.this,"Data ruang tidak boleh kosong", Toast.LENGTH_SHORT).show();
+
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(edtNama.getWindowToken(), 0);
+                }
+            });
+        }
     }
 
     private void tambahRuang(Ruang ruang) {
@@ -97,6 +114,18 @@ public class TambahRuangActivity extends AppCompatActivity {
         });
     }
 
+    private void updateRuang(Ruang r) {
+        database.child("ruang")
+                .child(r.getId())
+                .setValue(r)
+                .addOnSuccessListener(this, new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(TambahRuangActivity.this, "Ruang berhasil diedit", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
     private void sendNotification(JSONObject notification){
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(FCM_API, notification,
                 new Response.Listener<JSONObject>() {
@@ -123,4 +152,5 @@ public class TambahRuangActivity extends AppCompatActivity {
         };
         MySingleton.getInstance(getApplicationContext()).addToRequestQueue(jsonObjectRequest);
     }
+
 }
