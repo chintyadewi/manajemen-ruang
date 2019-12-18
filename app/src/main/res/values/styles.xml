@@ -6,6 +6,74 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/primaryLogo</item>
     </style>
+
+    <!-- Base application theme for info. -->
+    <style name="AppThemeInfo" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryInfo</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/primaryInfo</item>
+<!--        <item name="android:windowLightStatusBar">false</item>-->
+    </style>
+
+    <!-- Light base activity theme -->
+    <style name="ActivityTheme.Primary.Base.Light" parent="Theme.AppCompat.NoActionBar">
+        <item name="primaryColor">@color/primary</item>
+        <item name="secondaryColor">@color/primaryDark</item>
+        <item name="primaryTextColor">#33343B</item>
+        <item name="secondaryTextColor">#8033343B</item>
+        <item name="cardTextColor">@color/white</item>
+        <item name="subCardTextColor">#33343B</item>
+        <item name="invertTextColor">@color/white</item>
+        <item name="accentColor">#8033343B</item>
+        <item name="cardColor">@color/primary</item>
+        <item name="subCardColor">#BAC1CC</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- Dark base activity theme -->
+    <style name="ActivityTheme.Primary.Base.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="primaryColor">@color/white</item>
+        <item name="secondaryColor">@color/primary</item>
+        <item name="primaryTextColor">#F4F4F6</item>
+        <item name="cardTextColor">@color/white</item>
+        <item name="subCardTextColor">@color/white</item>
+        <item name="secondaryTextColor">#96F4F4F6</item>
+        <item name="invertTextColor">#33343B</item>
+        <item name="accentColor">@color/primary</item>
+        <item name="cardColor">#33343B</item>
+        <item name="subCardColor">#141418</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- Specific Feed activity theme -->
+    <style name="ActivityThemeLight" parent="ActivityTheme.Primary.Base.Light">
+        <item name="android:windowBackground">@color/white</item>
+<!--        <item name="android:windowLightStatusBar">true</item>-->
+    </style>
+
+    <style name="ActivityThemeDark" parent="ActivityTheme.Primary.Base.Dark">
+        <item name="android:windowBackground">@color/primaryDark</item>
+<!--        <item name="android:windowLightStatusBar">false</item>-->
+    </style>
+
+
 
 </resources>
