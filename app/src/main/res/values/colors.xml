@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#c17200</color>
-    <color name="colorPrimaryDark">#673d00</color>
-    <color name="colorAccent">#f5b85f</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#BD4F6C</color>
+    <color name="colorAccent">#E58C8A</color>
+    <color name="pink">#DB618D</color>
+    <color name="pink_alpha">#75DB618D</color>
 
 
 <!--    673d00 pintu-->

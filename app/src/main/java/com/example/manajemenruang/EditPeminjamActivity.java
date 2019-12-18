@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.manajemenruang.model.Peminjam;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class EditPeminjamActivity extends AppCompatActivity {
 
@@ -28,6 +29,8 @@ public class EditPeminjamActivity extends AppCompatActivity {
         edtNama=findViewById(R.id.edt_nama);
         edtKelas=findViewById(R.id.edt_kelas);
         btnSimpan=findViewById(R.id.btn_simpan);
+
+        database= FirebaseDatabase.getInstance().getReference();
 
         final Peminjam peminjam = (Peminjam) getIntent().getSerializableExtra("data");
         edtNim.setText(peminjam.getNim());

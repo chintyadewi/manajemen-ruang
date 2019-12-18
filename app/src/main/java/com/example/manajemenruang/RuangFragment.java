@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.manajemenruang.adapter.AdapterRuangRecylerView;
 import com.example.manajemenruang.model.Ruang;
@@ -33,7 +34,7 @@ public class RuangFragment extends Fragment {
     private RecyclerView rvRuang;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    private Button btnTambah;
+    private ImageButton btnTambah;
     private ArrayList<Ruang> daftarRuang;
 
     public RuangFragment() {
