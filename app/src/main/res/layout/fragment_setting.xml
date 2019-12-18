@@ -6,40 +6,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SettingFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageButton
-            android:id="@+id/btnSttng"
-            android:layout_width="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:layout_height="200dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/common_google_signin_btn_icon_dark"
-            android:layout_marginTop="10dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:background="@null"/>
-
-        <ImageButton
-            android:id="@+id/btnInfo"
-            android:layout_width="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:layout_height="200dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnSttng"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/ic_launcher_foreground"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:background="@null"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Switch"
+            />
+        <Switch
+            android:id="@+id/switchCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 
 </FrameLayout>

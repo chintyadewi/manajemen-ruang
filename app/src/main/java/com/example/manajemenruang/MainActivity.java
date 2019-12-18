@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragment=new RuangFragment();
                 break;
             case R.id.action_setting:
-                fragment=new RuangFragment();
+                fragment=new SettingFragment();
                 break;
         }
         return loadFragment(fragment);
