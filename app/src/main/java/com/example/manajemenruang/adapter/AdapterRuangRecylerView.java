@@ -83,7 +83,7 @@ public class AdapterRuangRecylerView extends RecyclerView.Adapter<AdapterRuangRe
         holder.cvRuang.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                final Dialog dialog = new Dialog(context);
+                final Dialog dialog = new Dialog(view.getContext());
                 dialog.setContentView(R.layout.dialog_view);
                 dialog.setTitle("Hapus Ruang");
                 dialog.show();
@@ -111,15 +111,6 @@ public class AdapterRuangRecylerView extends RecyclerView.Adapter<AdapterRuangRe
                 context.startActivity(i);
             }
         });
-
-//        holder.btnSelesai.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Ruang ruang=daftarRuang.get(position);
-//                ruang.setDipinjam(false);
-//                updateRuang(ruang, holder,(Activity) context);
-//            }
-//        });
 
         holder.tvNama.setText(nama);
         holder.tvLantai.setText("Lantai "+lantai);

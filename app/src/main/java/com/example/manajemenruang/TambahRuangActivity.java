@@ -60,7 +60,7 @@ public class TambahRuangActivity extends AppCompatActivity {
         final Ruang ruang = (Ruang) getIntent().getSerializableExtra("data");
         if (ruang!=null){
             edtNama.setText(ruang.getNama());
-            edtLantai.setText(ruang.getLantai());
+            edtLantai.setText(String.valueOf(ruang.getLantai()));
             edtDeskripsi.setText(ruang.getDeskripsi());
             btnSimpan.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -122,6 +122,7 @@ public class TambahRuangActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(TambahRuangActivity.this, "Ruang berhasil diedit", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(TambahRuangActivity.this, MainActivity.class));
                     }
                 });
     }
