@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/background_btn" android:state_enabled="true" />
+    <item android:drawable="@drawable/background_btn_disable" />
+</selector>

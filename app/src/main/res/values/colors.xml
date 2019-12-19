@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#c17200</color>
-    <color name="colorPrimaryDark">#673d00</color>
-    <color name="colorAccent">#f5b85f</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#BD4F6C</color>
+    <color name="colorAccent">#E58C8A</color>
+    <color name="pink">#DB618D</color>
+    <color name="pink_alpha">#75DB618D</color>
 
+    <color name="white">#FFFFFF</color>
+    <color name="primaryBackground">#DB618D</color>
+    <color name="primaryBackgroundDark">#BD4F6C</color>
+    <color name="primaryBackgroundAlpha">#75DB618D</color>
+    <color name="primaryBackgroundAlphaDark">#2FDB618D</color>
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="text">#2C2C2C</color>
+    <color name="accent">#E58C8A</color>
+    <color name="accentDark">#AC6766</color>
 
-<!--    673d00 pintu-->
-<!--    f5b85f tembok-->
-<!--    c17200 lingkaran-->
-
-    <color name="primary">#0B94D9</color>
-    <color name="primaryLogo">#0A7BB4</color>
-    <color name="primaryInfo">#034367</color>
-    <color name="primaryDark">#141d26</color>
-    <color name="black">#000000</color>
-    <color name="white">#F4F4F6</color>
-    <color name="red">#D32F2F</color>
+    <color name="backgroundDark">#160F30</color>
+    <color name="cardBackgroundDark">#251F29</color>
+    <color name="textDark">#CAC9C9</color>
 
 </resources>

@@ -85,6 +85,7 @@ public class AdapterPeminjamRecyclerView extends RecyclerView.Adapter<AdapterPem
             public void onClick(View view) {
                 Intent i=new Intent(context.getApplicationContext(), EditPeminjamActivity.class);
                 i.putExtra("data", daftarPeminjam.get(position));
+                i.putExtra("ruang", holder.tvRuang.getText());
                 context.startActivity(i);
             }
         });

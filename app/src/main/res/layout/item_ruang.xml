@@ -3,35 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
     android:elevation="10dp"
     app:cardCornerRadius="5dp"
     android:id="@+id/cv_ruang">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.8"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn_pinjam">
 
             <TextView
                 android:id="@+id/tv_nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama Ruang" />
+                android:text="Nama Ruang"
+                android:textSize="@dimen/sub_title"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tv_lantai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7" />
+                android:text="7"
+                android:layout_marginTop="5dp"/>
 
             <TextView
                 android:id="@+id/tv_deskripsi"
@@ -44,9 +49,15 @@
             android:id="@+id/btn_pinjam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:backgroundTint="@color/colorAccent"
-            android:text="Pinjam" />
+            android:background="@drawable/background_btn_selector"
+            android:textColor="@color/white"
+            android:text="Pinjam"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
 </androidx.cardview.widget.CardView>
