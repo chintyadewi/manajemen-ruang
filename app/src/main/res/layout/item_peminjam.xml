@@ -11,12 +11,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="?attr/cardBackground"
         android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tv_ruang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="?attr/text"
             android:text="Nama Ruang"
             android:textStyle="bold"
             android:textSize="@dimen/sub_title"
@@ -31,6 +33,7 @@
             android:id="@+id/linear"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textColor="?attr/text"
             android:orientation="vertical"
             android:layout_margin="15dp"
             app:layout_constraintLeft_toRightOf="@+id/tv_ruang"
@@ -44,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textSize="14sp"
+                android:textColor="?attr/text"
                 android:text="Chintya" />
 
             <TextView
@@ -51,12 +55,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1741720000"
+                android:textColor="?attr/text"
                 android:layout_marginTop="5dp"/>
 
             <TextView
                 android:id="@+id/tv_kelas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="?attr/text"
                 android:text="TI-3F" />
         </LinearLayout>
 
@@ -65,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/background_btn_selector"
-            android:textColor="@color/white"
+            android:textColor="?attr/primaryBackground"
             android:text="Selesai"
             app:layout_constraintRight_toRightOf="parent"
             android:textStyle="bold"

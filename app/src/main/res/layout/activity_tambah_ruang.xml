@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="?attr/colorPrimary"
     tools:context=".TambahRuangActivity">
 
     <View
@@ -31,7 +31,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/margin"
         android:text="Data Ruang"
-        android:textColor="@color/colorPrimary"
+        android:textColor="?attr/text"
         android:textSize="@dimen/title"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cv_form"
@@ -66,6 +66,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="?attr/text"
                     android:id="@+id/edt_nama"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -80,6 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/edt_lantai"
+                    android:textColor="?attr/text"
                     android:inputType="number"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -94,6 +96,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="?attr/text"
                     android:id="@+id/edt_deskripsi"/>
 
             </com.google.android.material.textfield.TextInputLayout>

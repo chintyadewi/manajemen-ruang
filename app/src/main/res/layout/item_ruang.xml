@@ -11,6 +11,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="?attr/cardBackground"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -28,6 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Ruang"
+                android:textColor="?attr/text"
                 android:textSize="@dimen/sub_title"
                 android:textStyle="bold"/>
 
@@ -36,12 +38,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7"
+                android:textColor="?attr/text"
                 android:layout_marginTop="5dp"/>
 
             <TextView
                 android:id="@+id/tv_deskripsi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="?attr/text"
                 android:text="Ruang Teori" />
         </LinearLayout>
 

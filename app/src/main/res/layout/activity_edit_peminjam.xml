@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="?attr/primaryBackground"
     tools:context=".EditPeminjamActivity">
     <View
         android:id="@+id/view_top"
@@ -30,7 +30,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/margin"
         android:text="Ruang"
-        android:textColor="@color/colorPrimary"
+        android:textColor="?attr/text"
         android:textSize="@dimen/title"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cv_form"
@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="?attr/cardBackground"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="50dp"
@@ -66,6 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/edt_nim"
+                    android:textColor="?attr/text"
                     android:inputType="number"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -79,6 +80,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="?attr/text"
                     android:id="@+id/edt_nama"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -93,6 +95,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="?attr/text"
                     android:id="@+id/edt_kelas"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -110,7 +113,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cv_form"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:textColor="@color/colorPrimary"
+        android:textColor="?attr/colorPrimary"
         android:textSize="17sp"
         android:textStyle="bold"
         android:background="@drawable/background_gradient"
