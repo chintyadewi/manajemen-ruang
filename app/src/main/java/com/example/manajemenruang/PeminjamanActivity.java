@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -51,6 +52,13 @@ public class PeminjamanActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences preferences = getSharedPreferences("SETTINGS", MODE_PRIVATE);
+        boolean useDarkMode = preferences.getBoolean("DARK_MODE", false);
+
+        if (useDarkMode) {
+            setTheme(R.style.ActivityThemeDark);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_peminjaman);
 
@@ -68,8 +76,9 @@ public class PeminjamanActivity extends AppCompatActivity {
         final Ruang ruang = (Ruang) getIntent().getSerializableExtra("data");
         ruang.setDipinjam(true);
         if(ruang!=null) {
-            tvNama.setText(ruang.getNama());
-            tvLantai.setText(String.valueOf(ruang.getLantai()));
+            tvNama.setText("Ruang "+ruang.getNama());
+            String lantai=String.valueOf(ruang.getLantai());
+            tvLantai.setText("Lantai "+lantai);
             tvDeskripsi.setText(ruang.getDeskripsi());
         }
 

@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CTAppTheme">
-        <attr name="primaryColor" format="color" />
-        <attr name="secondaryColor" format="color" />
-        <attr name="primaryTextColor" format="color" />
-        <attr name="secondaryTextColor" format="color" />
-        <attr name="cardTextColor" format="color"/>
-        <attr name="subCardTextColor" format="color"/>
-        <attr name="invertTextColor" format="color" />
-        <attr name="dividerColor" format="color" />
-        <attr name="backgroundCardColor" format="color" />
-        <attr name="iconPlaceholder" format="integer" />
-        <attr name="accentColor" format="color" />
-        <attr name="cardColor" format="color"/>
-        <attr name="subCardColor" format="color"/>
+        <attr name="primaryBackground" format="color" />
+        <attr name="primaryBackgroundDark" format="color" />
+        <attr name="primaryBackgroundAlpha" format="color" />
+        <attr name="text" format="color"/>
+        <attr name="accent" format="color" />
+        <attr name="backgroundBtn" format="color" />
+        <attr name="cardBackground" format="color" />
     </declare-styleable>
 </resources>

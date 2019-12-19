@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/colorPrimary"
     tools:context=".TambahRuangActivity">
 
     <View
         android:id="@+id/view_top"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/rounded_top"
+        android:background="@drawable/rounded_bottom_left"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -61,7 +61,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nama peminjam">
+                android:hint="Nama ruang">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -79,7 +79,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/edt_lantai"/>
+                    android:id="@+id/edt_lantai"
+                    android:inputType="number"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,6 +113,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:textColor="@color/colorPrimary"
         android:textSize="17sp"
+        android:textStyle="bold"
         android:background="@drawable/background_gradient"
         android:text="Simpan"/>
 

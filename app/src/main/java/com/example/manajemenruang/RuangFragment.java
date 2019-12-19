@@ -3,6 +3,7 @@ package com.example.manajemenruang;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +27,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
 public class RuangFragment extends Fragment {
@@ -45,7 +49,20 @@ public class RuangFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.fragment_ruang, container, false);
+        Context contextThemeWrapper;
+
+        SharedPreferences preferences = this.getActivity().getSharedPreferences("SETTINGS", MODE_PRIVATE);
+        boolean useDarkMode = preferences.getBoolean("DARK_MODE", false);
+
+        if (useDarkMode) {
+            contextThemeWrapper = new ContextThemeWrapper(getActivity(), R.style.ActivityThemeDark);
+        } else {
+            contextThemeWrapper = new ContextThemeWrapper(getActivity(), R.style.ActivityThemeLight);
+        }
+
+        LayoutInflater localInflater = inflater.cloneInContext(contextThemeWrapper);
+        View view = localInflater.inflate(R.layout.fragment_ruang, container, false);
+
         rvRuang =view.findViewById(R.id.rv_ruang);
         btnTambah=view.findViewById(R.id.btn_tambah);
 

@@ -7,39 +7,73 @@
     tools:context=".SettingFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/btnSttng"
-            android:layout_width="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:layout_height="200dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/common_google_signin_btn_icon_dark"
-            android:layout_marginTop="10dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:background="@null"/>
+            android:src="@drawable/aksen"
+            android:alpha="0.4"/>
 
-        <ImageButton
-            android:id="@+id/btnInfo"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/aksen2"
+            android:alpha="0.3"/>
+
+        <TextView
+            android:id="@+id/tv_judul_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setting"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin"
+            android:fontFamily="@font/niveaugroteskregular"
+            android:textSize="@dimen/title"
+            android:textStyle="bold"
+            android:textColor="?attr/text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
             android:layout_width="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:layout_height="200dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnSttng"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/ic_launcher_foreground"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:background="@null"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@+id/tv_judul_setting"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:elevation="10dp"
+            app:cardCornerRadius="5dp"
+            android:backgroundTint="?attr/cardBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gunakan Dark Mode"
+                    android:textColor="?attr/text"/>
+
+                <Switch
+                    android:id="@+id/switch_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </FrameLayout>
