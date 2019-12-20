@@ -29,6 +29,9 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:fontFamily">@font/niveaugroteskregular</item>
     </style>
 
     <!-- Dark base activity theme -->
@@ -46,6 +49,9 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:textColor">@color/textDark</item>
+        <item name="android:textColorPrimary">@color/textDark</item>
+        <item name="android:fontFamily">@font/niveaugroteskregular</item>
     </style>
 
     <!-- Specific Feed activity theme -->
