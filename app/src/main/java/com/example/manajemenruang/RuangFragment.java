@@ -93,7 +93,7 @@ public class RuangFragment extends Fragment {
 
                     daftarRuang.add(ruang);
                 }
-                adapter=new AdapterRuangRecylerView(daftarRuang, getActivity().getApplicationContext());
+                adapter=new AdapterRuangRecylerView(daftarRuang, getActivity());
                 rvRuang.setAdapter(adapter);
             }
 

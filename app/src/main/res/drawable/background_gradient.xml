@@ -5,8 +5,8 @@
     <gradient
         android:centerX="60%"
         android:centerY="40%"
-        android:startColor="?attr/primaryBackgroundDark"
-        android:centerColor="?attr/primaryBackgroundDark"
+        android:startColor="?attr/backgroundBtn"
+        android:centerColor="?attr/backgroundBtn"
         android:endColor="?attr/accent"
         android:type="linear" />
     <corners android:radius="20dp"/>

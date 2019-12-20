@@ -6,6 +6,9 @@
     <color name="pink">#DB618D</color>
     <color name="pink_alpha">#75DB618D</color>
 
+    <color name="purple">#ABDB618D</color>
+    <color name="purple_alpha">#C9E9B8CB</color>
+
     <color name="white">#FFFFFF</color>
     <color name="primaryBackground">#DB618D</color>
     <color name="primaryBackgroundDark">#BD4F6C</color>

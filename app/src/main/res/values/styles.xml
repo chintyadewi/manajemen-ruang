@@ -22,6 +22,8 @@
         <item name="primaryBackground">@color/white</item>
         <item name="primaryBackgroundDark">@color/primaryBackgroundDark</item>
         <item name="primaryBackgroundAlpha">@color/primaryBackgroundAlpha</item>
+        <item name="backgroundBtn">@color/pink</item>
+        <item name="backgroundBtnDis">@color/pink_alpha</item>
         <item name="text">@color/text</item>
         <item name="accent">@color/accent</item>
         <item name="cardBackground">@color/cardBackground</item>
@@ -29,8 +31,8 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:textColor">@color/text</item>
-        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorHint">@color/textDark</item>
+        <item name="colorControlNormal">@color/text</item>
         <item name="android:fontFamily">@font/niveaugroteskregular</item>
     </style>
 
@@ -42,15 +44,15 @@
         <item name="primaryBackground">@color/backgroundDark</item>
         <item name="primaryBackgroundDark">@color/primaryBackgroundDark</item>
         <item name="primaryBackgroundAlpha">@color/primaryBackgroundDark</item>
-        <item name="text">@color/textDark</item>
+        <item name="backgroundBtn">@color/purple</item>
+        <item name="backgroundBtnDis">@color/purple_alpha</item>
+        <item name="text">@color/white</item>
         <item name="accent">@color/accentDark</item>
         <item name="cardBackground">@color/cardBackgroundDark</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:textColor">@color/textDark</item>
-        <item name="android:textColorPrimary">@color/textDark</item>
         <item name="android:fontFamily">@font/niveaugroteskregular</item>
     </style>
 

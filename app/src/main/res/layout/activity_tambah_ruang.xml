@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimary"
+    android:background="?attr/primaryBackground"
     tools:context=".TambahRuangActivity">
 
     <View
@@ -31,7 +31,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/margin"
         android:text="Data Ruang"
-        android:textColor="?attr/text"
+        android:textColor="@color/colorPrimary"
         android:textSize="@dimen/title"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cv_form"
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="?attr/cardBackground"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="50dp"
@@ -66,8 +66,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="?attr/text"
-                    android:id="@+id/edt_nama"/>
+                    android:id="@+id/edt_nama"
+                    android:textColor="?attr/text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,8 +81,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/edt_lantai"
-                    android:textColor="?attr/text"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:textColor="?attr/text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,8 +96,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="?attr/text"
-                    android:id="@+id/edt_deskripsi"/>
+                    android:id="@+id/edt_deskripsi"
+                    android:textColor="?attr/text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>

@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/background_btn_selector"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorPrimary"
             android:text="Pinjam"
             app:layout_constraintRight_toRightOf="parent"
             android:textStyle="bold"

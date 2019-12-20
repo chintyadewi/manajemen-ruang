@@ -84,7 +84,7 @@ public class PeminjamFragment extends Fragment{
 
                     daftarPeminjam.add(peminjam);
                 }
-                adapter=new AdapterPeminjamRecyclerView(daftarPeminjam, getActivity().getApplicationContext());
+                adapter=new AdapterPeminjamRecyclerView(daftarPeminjam, getActivity());
                 rvPeminjam.setAdapter(adapter);
             }
 

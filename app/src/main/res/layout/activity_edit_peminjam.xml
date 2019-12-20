@@ -30,9 +30,9 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/margin"
         android:text="Ruang"
-        android:textColor="?attr/text"
         android:textSize="@dimen/title"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/cv_form"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -66,8 +66,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/edt_nim"
-                    android:textColor="?attr/text"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:textColor="?attr/text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -80,8 +80,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="?attr/text"
-                    android:id="@+id/edt_nama"/>
+                    android:id="@+id/edt_nama"
+                    android:textColor="?attr/text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -95,8 +95,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="?attr/text"
-                    android:id="@+id/edt_kelas"/>
+                    android:id="@+id/edt_kelas"
+                    android:textColor="?attr/text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
